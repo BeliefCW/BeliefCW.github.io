@@ -310,7 +310,7 @@
 <p> #include &lt;stdio.h&gt;</p>
 <p> #include &lt;stdlib.h&gt;</p>
 <p> #include&lt;windows.h&gt;<br>int  main()<br>{<br>    int a = 0;<br>    int b = 0;<br>    int c = 0;<br>    scanf(“%a,%b”, &amp;a, &amp;b);<br>    while (c=a%b)<br>    {<br>        a = b;<br>        b = c;<br>    }<br>    printf(“%d”,b);<br>    return 0;<br>}<br><strong>3.打印一个菱形</strong><br>首先明白需要打印什么，即空格和元素符号；然后观察元素和空格所在的位置及规律；判断循环，列出所需循环的条件并且要一一对应所需要打印的。</p>
-<p>int main()<br>{<br>    int line = 0;<br>    int i = 0;//行数<br>    int j = 0;<br>    printf(“请输入所需要打印的行数line:\n “);<br>    scanf(“%d”,&amp;line);<br>    //先打印上面的三角形<br>    for (i = 1; i &lt;= line; i++)<br>    {<br>        for (j = 1; j &lt;=line-i; j++)<br>        {<br>            printf(“ “);//打印空格<br>        }<br>        for (j = 0; j &lt; 2 <em> i - 1; j++)<br>        {<br>            printf(“</em>“);<br>        }<br>        printf(“\n”);<br>    }<br>    //打印后半部分倒立三角形<br>    for (i = 1; i &lt; line; i++)<br>    {<br>        for (j = 1; j &lt;= i; j++)<br>        {<br>            printf(“ “);<br>        }<br>        for (j = 1; j &lt;= 2 <em>(line-i)-1 ;j++)<br>        {<br>            printf(“</em>“);<br>        }<br>        printf(“\n”);<br>    }<br>    system(“pause”);<br>    return 0;<br>}</p>
+<p>int main()<br>{<br>    int line = 0;<br>    int i = 0;//行数<br>    int j = 0;<br>    printf(“请输入所需要打印的行数line:\n “);<br>    scanf(“%d”,&amp;line);<br>    //先打印上面的三角形<br>    for (i = 1; i &lt;= line; i++)<br>    {<br>        for (j = 1; j &lt;=line-i; j++)<br>        {<br>            printf(“ “);//打印空格<br>        }<br>        for (j = 0; j &lt; 2 <em> i - 1; j++)<br>        {<br>            printf(“</em>“);<br>        }<br>        printf(“\n”);<br>    }<br>    //打印后半部分倒立三角形<br>    for (i = 1; i &lt; line; i++)<br>    {<br>        for (j = 1; j &lt;= i; j++)<br>        {<br>            printf(“ “);<br>        }<br>        for (j = 1; j &lt;= 2 <em>(line-i)-1 ;j++)<br>        {<br>            printf(“</em>“);<br>        }<br>        printf(“\n”);<br>    }<br>    system(“pause”);<br>    return 0;<br>}<br><strong>4.在一个有序数组中查找具体的某个数字n（折半，二分查找</strong><br>做此题也是先要想到所需变量及怎么去表达变量，找到其中的规律，然后考虑所用的语法<br>int main()<br>{<br>    int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };<br>    int k = 8;<br>    int left = 0;<br>    int right = sizeof(arr) / sizeof(arr[0] - 1);//整形数组后面没有\0,字符串后面才有<br>    while (left &lt;= right)<br>    {<br>        int mid = (right - left) / 2 + left;<br>        if (arr[mid] &gt; k)<br>        {<br>            right = mid - 1;<br>        }<br>        else if (arr[mid] &lt; k)<br>        {<br>            left = mid + 1;<br>        }<br>        else<br>        {<br>            printf(“找到了，%d\n”,mid);<br>            break;<br>        }<br>    }<br>    if (left&gt;right)<br>    {<br>        printf(“找不到了”);<br>    }<br>    system(“pause”);<br>    return 0;<br>}<br><strong>5.编写代码实现，模拟用户登陆情景，并且只能登陆三次。（只允许输入三次密码，正确提示成功。如三次都错误，推出/程序）</strong><br>int main()<br>{<br>    char password[10] = { 0 };<br>    int i = 0;<br>    for (i = 0; i &lt; 3; i++)<br>    {<br>        printf(“请输入密码!\n”);<br>        scanf(“%s”,password);<br>        if (strcmp(password,”123456”) == 0)<br>        {<br>            printf(“密码正确\n”);<br>            break;<br>        }<br>        else<br>        {<br>            printf(“请在次输入密码!\n”);<br>        }<br>    }<br>    if (i == 3)<br>    {<br>        printf(“结束程序”);<br>    }<br>    system(“pause”);<br>    return 0;<br>}//strcmp比较用来字符串  如比较strcmp（password，”456789”）</p>
 
           
         
@@ -359,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/08/New Document/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/08/C语言基本概念/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -378,7 +378,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/08/New Document/" itemprop="url">未命名</a></h1>
+                <a class="post-title-link" href="/2018/11/08/C语言基本概念/" itemprop="url">未命名</a></h1>
         
 
         <div class="post-meta">
@@ -437,7 +437,7 @@
 <li>变量分为局部变量和全局变量<br> 局部变量的作用域是变量所在的局部范围<br> 全局变量的作用域是整个工程</li>
 <li>常量<br>字面常量<br>枚举常量<br>const修饰的常量<br>#define定义的标识符常量</li>
 </ol>
-<p><strong>字符串+转义字符+注释</strong><br>“hello，word”  字符串，双引号引起的 //字符串的结束标志是\0的转移字符，计算字符串长度的时候，\0不计入<br>转义字符<br>\n,\s,\t,\v,\ddd,\xddd,\?,\’,\,\”</p>
+<p><strong>字符串+转义字符+注释</strong><br>“hello，word”  字符串，双引号引起的 //字符串的结束标志是\0的转移字符，计算字符串长度的时候，\0不计入<br>转义字符<br>\n,\s,\t,\v,\ddd,\xddd,\?,\’,\,\”<br>注！  整形数组后面没有\0,字符串后面才有\0;</p>
 
           
         
