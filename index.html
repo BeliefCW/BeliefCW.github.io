@@ -229,6 +229,136 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/08/C语言作业2018-11-8/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/08/C语言作业2018-11-8/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-08T23:57:51+08:00">
+                2018-11-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##c语言作业</p>
+<p>###2018-11-08<br><strong>1.打印一个菱形</strong><br>打印一个菱形：<br>首先明白需要打印什么，即空格和元素符号；然后观察元素和空格所在的位置及规律；判断循环，列出所需循环的条件并且要一一对应所需要打印的。</p>
+<p> #define _CRT_SECURE_NO_WARNINGS 1</p>
+<p> #include &lt;stdio.h&gt;</p>
+<p> #include &lt;stdlib.h&gt;</p>
+<p> #include&lt;windows.h&gt;<br>int main()<br>{<br>    int line = 0;<br>    int i = 0;//行数<br>    int j = 0;<br>    printf(“请输入所需要打印的行数line:\n “);<br>    scanf(“%d”,&amp;line);<br>    //先打印上面的三角形<br>    for (i = 1; i &lt;= line; i++)<br>    {<br>        for (j = 1; j &lt;=line-i; j++)<br>        {<br>            printf(“ “);//打印空格<br>        }<br>        for (j = 0; j &lt; 2 <em> i - 1; j++)<br>        {<br>            printf(“</em>“);<br>        }<br>        printf(“\n”);<br>    }<br>    //打印后半部分倒立三角形<br>    for (i = 1; i &lt; line; i++)<br>    {<br>        for (j = 1; j &lt;= i; j++)<br>        {<br>            printf(“ “);<br>        }<br>        for (j = 1; j &lt;= 2 <em>(line-i)-1 ;j++)<br>        {<br>            printf(“</em>“);<br>        }<br>        printf(“\n”);<br>    }<br>    system(“pause”);<br>    return 0;<br>}<br><strong>2.求两个数的最大公约数</strong></p>
+<p> #define _CRT_SECURE_NO_WARNINGS 1</p>
+<p> #include &lt;stdio.h&gt;</p>
+<p> #include &lt;stdlib.h&gt;</p>
+<p> #include&lt;windows.h&gt;<br>int  main()<br>{<br>    int a = 0;<br>    int b = 0;<br>    int c = 0;<br>    scanf(“%a,%b”, &amp;a, &amp;b);<br>    while (c=a%b)<br>    {<br>        a = b;<br>        b = c;<br>    }<br>    printf(“%d”,b);<br>    return 0;<br>}<br><strong>3.打印一个菱形</strong><br>首先明白需要打印什么，即空格和元素符号；然后观察元素和空格所在的位置及规律；判断循环，列出所需循环的条件并且要一一对应所需要打印的。</p>
+<p>int main()<br>{<br>    int line = 0;<br>    int i = 0;//行数<br>    int j = 0;<br>    printf(“请输入所需要打印的行数line:\n “);<br>    scanf(“%d”,&amp;line);<br>    //先打印上面的三角形<br>    for (i = 1; i &lt;= line; i++)<br>    {<br>        for (j = 1; j &lt;=line-i; j++)<br>        {<br>            printf(“ “);//打印空格<br>        }<br>        for (j = 0; j &lt; 2 <em> i - 1; j++)<br>        {<br>            printf(“</em>“);<br>        }<br>        printf(“\n”);<br>    }<br>    //打印后半部分倒立三角形<br>    for (i = 1; i &lt; line; i++)<br>    {<br>        for (j = 1; j &lt;= i; j++)<br>        {<br>            printf(“ “);<br>        }<br>        for (j = 1; j &lt;= 2 <em>(line-i)-1 ;j++)<br>        {<br>            printf(“</em>“);<br>        }<br>        printf(“\n”);<br>    }<br>    system(“pause”);<br>    return 0;<br>}</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/08/New Document/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -628,7 +758,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
